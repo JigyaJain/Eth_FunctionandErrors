@@ -10,18 +10,17 @@ Another function ifAssert is used for assert statement. By this program the read
 
 ### Executing program
 
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.26;
+    // SPDX-License-Identifier: MIT
+    pragma solidity 0.8.26;
 
-contract Transact{
+    contract Transact{
     uint pin = 1711;
     uint totalBalance = 4000;
 
-//if require condition is true then value is debitted and the balance will reduce
-    function debit (uint _n, uint _val ) public {
-        require(pin == _n, "Pin is correct");
-        totalBalance -= _val;
-
+    //if require condition is true then value is debitted and the balance will reduce
+         function debit (uint _n, uint _val ) public {
+            require(pin == _n, "Pin is correct");
+            totalBalance -= _val;
     }
 
     function checkError (uint _n) public view {
@@ -37,7 +36,7 @@ contract Transact{
     function getBalance() public view returns(uint) {
         return totalBalance;
     }
-}
+    }
 
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.26" (or another compatible version), and then click on the "Compile Transact.sol" button.
