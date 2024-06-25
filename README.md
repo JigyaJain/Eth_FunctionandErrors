@@ -17,6 +17,7 @@ contract Transact{
     uint pin = 1711;
     uint totalBalance = 4000;
 
+//if require condition is true then value is debitted and the balance will reduce
     function debit (uint _n, uint _val ) public {
         require(pin == _n, "Pin is correct");
         totalBalance -= _val;
